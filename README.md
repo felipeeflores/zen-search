@@ -1,0 +1,12 @@
+# zen-searh
+
+Simple search application for a pre-defined dataset.
+
+## Requiremets
+- Java SDK 1.8
+- SBT 1.x
+
+## Running the app
+
+//TODO
+
