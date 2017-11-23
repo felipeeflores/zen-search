@@ -3,11 +3,13 @@
 ## General Architecture for a Search Application
 
 For a search application I would normally break down the system into two main modules:
+
 1. **An ETL process where:**
 
 * Extract the data from a source
 * Transform the data into a search suitable format.
-* Load the data into some sort of repository optimized for fast access and or search (eg. Search Engine or DB).  
+* Load the data into some sort of repository optimized for fast access and or search (eg. Search Engine or DB).
+ 
 If search capabilities are the most important feature I would choose something like Elasticsearch.
 
 2. **A search service, which**
@@ -26,7 +28,9 @@ search engine, database repository out of scope. Nevertheless, as stated above f
 features completeness I would include an Elasticsearch cluster with several nodes and automatic auto-scaling policies.
 
 ### Programming Principles
+
 Functional style of programming, including, but not limited to:
+
 - ADTs
 - Immutability
 - Side effects isolation
@@ -36,9 +40,10 @@ Functional style of programming, including, but not limited to:
 
 ### Free Monads
 
-Free monads are very elegant and powerful technique to push the side effects to the boundaries of our programs. 
-Allowing the developer to implement referentially transparent functions/components while simplifying the testing of the application.
+[Free monads](https://typelevel.org/cats/datatypes/freemonad.html) are very elegant and powerful technique to push the 
+side effects to the boundaries of our programs. 
+Allowing the developer to implement referentially transparent functions/components while simplifying testing.
 
 
 ### Programming language
-For this application I have chosen to use Scala 2.12 with the Cats functional library.
+For this application I have chosen to use Scala 2.12 with the [Cats](https://typelevel.org/cats/) functional library.
