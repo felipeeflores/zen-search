@@ -2,7 +2,7 @@
 
 ## General Architecture for a Search Application
 
-For a search application I would normally break down the system into two main modules:
+For a search application you could break down the system into two main modules:
 
 1. **An ETL process where:**
 
@@ -10,7 +10,7 @@ For a search application I would normally break down the system into two main mo
 * Transform the data into a search suitable format.
 * Load the data into some sort of repository optimized for fast access and or search (eg. Search Engine or DB).
  
-If search capabilities are the most important feature I would choose something like Elasticsearch.
+If search capabilities are the most important feature I would recommend a search engine such as Elasticsearch.
 
 2. **A search service, which**
 
@@ -24,8 +24,7 @@ If search capabilities are the most important feature I would choose something l
 ## Application Design
 
 For simplicity, this application will include both modules in a single project, and we are considering a fully fledged 
-search engine, database repository out of scope. Nevertheless, as stated above for performance, robustness and search 
-features completeness I would include an Elasticsearch cluster with several nodes and automatic auto-scaling policies.
+search engine, database repository out of scope. 
 
 ### Programming Principles
 
@@ -46,4 +45,4 @@ Allowing the developer to implement referentially transparent functions/componen
 
 
 ### Programming language
-For this application I have chosen to use Scala 2.12 with the [Cats](https://typelevel.org/cats/) functional library.
+For this sample application we are using Scala 2.12 with the [Cats](https://typelevel.org/cats/) functional library.
