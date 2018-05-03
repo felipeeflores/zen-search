@@ -1,4 +1,4 @@
-# zen-search
+# simple-search
 
 Simple search application for a pre-defined dataset.
 
